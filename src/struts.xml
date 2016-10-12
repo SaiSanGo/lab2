@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="Categorylist" class="library.action.categoryAction" method="SearchBook">
+			<result name="success">/search.jsp</result>
+			<result name="faild">/faild.jsp</result>
+		</action>
+		<action name="showBook" class="library.action.categoryAction" method="showBook">
+			<result name="success">/book.jsp</result>
+		</action>
+		<action name="delCategory" class="library.action.categoryAction" method="delCategory">
+      <result type="redirect">categoryList.jsp</result>
+      </action>
+	</package>
+</struts>
